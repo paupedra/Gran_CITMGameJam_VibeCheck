@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a70fef4c61fed9a4888389f8698db18e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Alenia
+  fontNames:
+  - Alenia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fefd14566fb05e043ab05294e0db2d36, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
