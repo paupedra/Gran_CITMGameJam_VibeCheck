@@ -12,7 +12,19 @@ public class Level_Changer : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            FadeToLevel(1);
+            FadeToNextLevel();
+        }
+    }
+
+    public void FadeToNextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            FadeToLevel(0);
         }
     }
 
