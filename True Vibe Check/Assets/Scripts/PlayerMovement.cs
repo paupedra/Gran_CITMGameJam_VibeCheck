@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     public float checkRadious;
 
-    //float width = GetComponent<SpriteRenderer>().bounds.size.x;
     Animator animator;
 
     // Start is called before the first frame update
@@ -29,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("I have been born");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
-        
+        feetOffset.y = -2 * transform.localScale.y;
 
         isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
 
