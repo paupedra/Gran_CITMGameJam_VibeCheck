@@ -140,10 +140,13 @@ MonoBehaviour:
   maxSpeed: {x: 10, y: 2, z: 0}
   jumpSpeed: {x: 0, y: 0}
   jumpForce: {x: 0, y: 15}
-  feetOffset: {x: 0, y: -0.75, z: 0}
+  feetOffset: {x: 0, y: -2, z: 0}
+  running: 0
+  falling: 0
+  jumping: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   checkRadious: 0.1
 --- !u!95 &1109576664
 Animator:
