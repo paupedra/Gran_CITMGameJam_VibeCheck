@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 jumpForce;
 
     bool isGrounded;
-    public Transform feetPos;
     public LayerMask whatIsGround;
     public float checkRadious;
 
@@ -34,14 +33,14 @@ public class PlayerMovement : MonoBehaviour
         //    Debug.Log("Jumped!");
         //}
 
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadious, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(transform.position, checkRadious, whatIsGround);
 
         if(isGrounded && Input.GetButtonDown("Jump") )
         {
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        if(isGrounded)
+        if(isGrounded )
         {
 
         }
