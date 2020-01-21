@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     Vector3 movement = new Vector3(0f, 0f,0f);
     public Vector3 maxSpeed = new Vector3(5f, 2f,0f);
     public Vector2 jumpSpeed = new Vector2(0f, 5f);
@@ -18,14 +19,16 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     public LayerMask whatIsGround;
     public float checkRadious;
-    
 
+    //float width = GetComponent<SpriteRenderer>().bounds.size.x;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("I have been born");
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,19 +37,21 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         transform.position += movement * Time.deltaTime * maxSpeed.x;
 
-        running = false;
+        animator.SetBool("isRunning", false);
 
         if (Input.GetAxis("Horizontal") > 0)
         {
-            running = true;
+            animator.SetBool("isRunning", true);
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
 
         if (Input.GetAxis("Horizontal") < 0)
         {
-            running = true;
+            animator.SetBool("isRunning", true);
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
+
+        
 
         isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
 
