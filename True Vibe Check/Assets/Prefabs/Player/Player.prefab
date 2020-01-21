@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793639957104055765, guid: 803f5f85a9228a44dae107cd3dd05656,
+  m_Sprite: {fileID: 4944230376442633554, guid: 863b32efe1227cf4e9dad5a24657902c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,10 +140,13 @@ MonoBehaviour:
   maxSpeed: {x: 10, y: 2, z: 0}
   jumpSpeed: {x: 0, y: 0}
   jumpForce: {x: 0, y: 15}
-  feetOffset: {x: 0, y: -0.75, z: 0}
+  feetOffset: {x: 0, y: -2, z: 0}
+  running: 0
+  falling: 0
+  jumping: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   checkRadious: 0.1
 --- !u!95 &1109576664
 Animator:

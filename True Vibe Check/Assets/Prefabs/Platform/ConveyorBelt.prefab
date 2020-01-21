@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1867998272693544403}
   - component: {fileID: 1698453781907755078}
   - component: {fileID: 7401240864739677888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ConveyorBelt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,3 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6551a0a5f543e489f19b7ea05c8fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0.05, y: 0, z: 0}
+  conveyorCollider: {fileID: 0}
+  playerCollider: {fileID: 0}
