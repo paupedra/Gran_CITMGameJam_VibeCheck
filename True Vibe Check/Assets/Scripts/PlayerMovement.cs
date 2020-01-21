@@ -28,6 +28,15 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         transform.position += movement * Time.deltaTime * maxSpeed.x;
 
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
         //if(Input.GetButtonDown("Jump"))
         //{
         //    rb.AddForce(jumpSpeed, ForceMode2D.Impulse);
