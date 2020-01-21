@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -133,11 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052755bac1484c84db7786abca2fae12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: {x: 5, y: 5, z: 0}
-  jumpSpeed: {x: 0, y: 5}
-  jumpForce: {x: 0, y: 5}
-  feetPos: {fileID: 0}
+  maxSpeed: {x: 10, y: 2, z: 0}
+  jumpSpeed: {x: 0, y: 0}
+  jumpForce: {x: 0, y: 15}
+  feetOffset: {x: 0, y: -0.75, z: 0}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  checkRadious: 0
+    m_Bits: 4294967295
+  checkRadious: 0.1

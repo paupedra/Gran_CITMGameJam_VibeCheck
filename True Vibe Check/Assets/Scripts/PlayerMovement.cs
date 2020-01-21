@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 jumpSpeed = new Vector2(0f, 5f);
     static Rigidbody2D rb;
     public Vector2 jumpForce;
+    public Vector3 feetOffset;
 
     bool isGrounded;
     public LayerMask whatIsGround;
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         //    Debug.Log("Jumped!");
         //}
 
-        isGrounded = Physics2D.OverlapCircle(transform.position, checkRadious, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
 
         if(isGrounded && Input.GetButtonDown("Jump") )
         {
