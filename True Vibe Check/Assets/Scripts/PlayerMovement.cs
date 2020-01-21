@@ -53,10 +53,21 @@ public class PlayerMovement : MonoBehaviour
             falling = false;
             jumping = false;
         }
-        //if()
-        //{
+        else
+        {
+            running = false;
 
-        //}
+            if(rb.velocity.y > 0)
+            {
+                jumping = true;
+                falling = false;
+            }
+            else
+            {
+                falling = true;
+                jumping = false;
+            }
+        }
 
         if(isGrounded && Input.GetButtonDown("Jump") )
         {
