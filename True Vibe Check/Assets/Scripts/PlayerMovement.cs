@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     public LayerMask whatIsGround;
     public float checkRadious;
+    
+
 
     // Start is called before the first frame update
     void Start()
