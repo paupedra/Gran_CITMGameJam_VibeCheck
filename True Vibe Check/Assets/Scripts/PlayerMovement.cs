@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 jumpForce;
     public Vector3 feetOffset;
 
+    public bool running;
+    public bool falling;
+    public bool jumping;
+
     bool isGrounded;
     public LayerMask whatIsGround;
     public float checkRadious;
@@ -28,13 +32,31 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         transform.position += movement * Time.deltaTime * maxSpeed.x;
 
-        //if(Input.GetButtonDown("Jump"))
-        //{
-        //    rb.AddForce(jumpSpeed, ForceMode2D.Impulse);
-        //    Debug.Log("Jumped!");
-        //}
+        running = false;
+
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            running = true;
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            running = true;
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
 
         isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
+
+        if(isGrounded)
+        {
+            falling = false;
+            jumping = false;
+        }
+        //if()
+        //{
+
+        //}
 
         if(isGrounded && Input.GetButtonDown("Jump") )
         {
