@@ -88,24 +88,25 @@ public class PlayerMovement : MonoBehaviour
 
         running = false;
 
-        if (Input.GetAxis("Horizontal") > 0)
+        if (dead)
         {
-            animator.SetBool("isRunning", true);
-            running = true;
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-            flipped = false;
-            //Debug.Log("Running");
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                animator.SetBool("isRunning", true);
+                running = true;
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+                flipped = false;
+                //Debug.Log("Running");
+            }
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                animator.SetBool("isRunning", true);
+                running = true;
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                flipped = true;
+                //Debug.Log("Running");
+            }
         }
-
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            animator.SetBool("isRunning", true);
-            running = true;
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-            flipped = true;
-            //Debug.Log("Running");
-        }
-
         feetOffset.y = -2 * transform.localScale.y;
         isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
 
@@ -152,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(isGrounded && Input.GetButtonDown("Jump") )
+        if(isGrounded && Input.GetButtonDown("Jump") && !dead)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
