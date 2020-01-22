@@ -262,6 +262,11 @@ PrefabInstance:
       propertyPath: loader
       value: 
       objectReference: {fileID: 913524125}
+    - target: {fileID: 9112016696488604869, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 353330655}
     - target: {fileID: 2969830727772900731, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
         type: 3}
       propertyPath: crateArray.Array.size
@@ -352,6 +357,31 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: crateArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: crateArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 36498011}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: crateArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1936292083}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: crateArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 288203488}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 211006559}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2b5d2edb9b96a4c9e10265afc88562, type: 3}
 --- !u!70 &211006559 stripped
@@ -377,6 +407,12 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 2808978013074567751, guid: e595d70b3ac7da24c8214026b6987825,
     type: 3}
   m_PrefabInstance: {fileID: 452742892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &353330655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6870792196116831330, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+    type: 3}
+  m_PrefabInstance: {fileID: 173854192}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &415053711
 PrefabInstance:
@@ -620,17 +656,17 @@ PrefabInstance:
     - target: {fileID: 2808978013074567754, guid: e595d70b3ac7da24c8214026b6987825,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2808978013074567754, guid: e595d70b3ac7da24c8214026b6987825,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2808978013074567754, guid: e595d70b3ac7da24c8214026b6987825,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2808978013074567754, guid: e595d70b3ac7da24c8214026b6987825,
         type: 3}
@@ -961,6 +997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: elevationSpeed
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -9146823523210083818, guid: f9d783cb488c2ef44ac3b8f7e909c6c2,
+        type: 3}
+      propertyPath: horizontal
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1880199994088812754, guid: f9d783cb488c2ef44ac3b8f7e909c6c2,
         type: 3}

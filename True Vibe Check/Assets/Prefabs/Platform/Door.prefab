@@ -123,3 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   buttonsArray: []
+  elevationSpeed: 0.05
+  elevationLimit: 10
+  horizontal: 0
