@@ -965,6 +965,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 798751911}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1708630664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9215612528227320797, guid: 06cac6faf94d4e24a865ff43afe46099,
+    type: 3}
+  m_PrefabInstance: {fileID: 8974658500020911544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840960120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1028,12 @@ Transform:
   m_Father: {fileID: 1395934277}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1980895198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8974658500860686950, guid: 06cac6faf94d4e24a865ff43afe46099,
+    type: 3}
+  m_PrefabInstance: {fileID: 8974658500020911544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8974658500020911544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1094,10 +1106,38 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 994498994}
+    - target: {fileID: 8974658499884863012, guid: 06cac6faf94d4e24a865ff43afe46099,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1708630664}
+    - target: {fileID: 8974658499884863012, guid: 06cac6faf94d4e24a865ff43afe46099,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974658500860686936, guid: 06cac6faf94d4e24a865ff43afe46099,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1708630664}
+    - target: {fileID: 8974658500860686936, guid: 06cac6faf94d4e24a865ff43afe46099,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 8974658499884098575, guid: 06cac6faf94d4e24a865ff43afe46099,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 659755814, guid: 06cac6faf94d4e24a865ff43afe46099, type: 3}
+      propertyPath: PauseMenuUI
+      value: 
+      objectReference: {fileID: 1708630664}
+    - target: {fileID: 659755814, guid: 06cac6faf94d4e24a865ff43afe46099, type: 3}
+      propertyPath: ResumeBut
+      value: 
+      objectReference: {fileID: 1980895198}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06cac6faf94d4e24a865ff43afe46099, type: 3}
