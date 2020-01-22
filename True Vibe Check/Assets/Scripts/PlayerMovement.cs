@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,16 +19,16 @@ public class PlayerMovement : MonoBehaviour
     public bool jumping;
     public bool flipped;
     public bool dead = false;
-    public int version = 0;
+    
 
 
     bool isGrounded;
     public LayerMask whatIsGround;
     public float checkRadious;
 
-    //public int versionss = random.Next(2000);
+    public int versions = 0;
 
- 
+    public Text v_text;
 
     Animator animator;
 
@@ -48,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("I have been born");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        v_text.text = "Version: " + versions;
 
         Level_script = LevelChange.GetComponent<Level_Changer>();
     }
@@ -157,7 +160,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("death");
             dead = true;
-            version++;
+            versions++;
+            v_text.text = "Version: " + versions;
+           
         }
 
 
