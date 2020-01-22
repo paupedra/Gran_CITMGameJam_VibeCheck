@@ -65,14 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(running && !isGrounded)
         {
-            animator.SetBool("isRunnning", false);
+            animator.SetBool("isRunning", false);
             running = false;
         }
 
         if(isGrounded)
         {
-            animator.SetBool("isFalling", false);
-            animator.SetBool("isJumping", false);
             falling = false;
             jumping = false;
         }
@@ -82,15 +80,15 @@ public class PlayerMovement : MonoBehaviour
 
             if(rb.velocity.y > 0)
             {
-                animator.SetBool("isFalling", false);
                 animator.SetBool("isJumping", true);
+                Debug.Log("Jumping!");
                 jumping = true;
                 falling = false;
             }
             else
             {
                 animator.SetBool("isFalling", true);
-                animator.SetBool("isJumping", false);
+                Debug.Log("Falling!");
                 falling = true;
                 jumping = false;
             }
@@ -99,11 +97,6 @@ public class PlayerMovement : MonoBehaviour
         if(isGrounded && Input.GetButtonDown("Jump") )
         {
             rb.velocity = Vector2.up * jumpForce;
-        }
-
-        if(isGrounded )
-        {
-
         }
     }
 }
