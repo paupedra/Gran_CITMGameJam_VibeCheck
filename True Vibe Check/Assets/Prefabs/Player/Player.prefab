@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052755bac1484c84db7786abca2fae12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: {x: 10, y: 2, z: 0}
+  maxSpeed: {x: 8, y: 2, z: 0}
   jumpSpeed: {x: 0, y: 0}
   jumpForce: {x: 0, y: 15}
   feetOffset: {x: 0, y: 0, z: 0}
