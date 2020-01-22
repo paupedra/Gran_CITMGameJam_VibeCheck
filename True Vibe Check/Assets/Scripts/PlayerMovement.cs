@@ -24,6 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
+    //Crate Grab
+    public BoxCollider2D[] crateArray;
+    public CapsuleCollider2D playerCollider;
+
+    private BoxCollider2D grabbedCrate;
+
+    private bool isGrabbing = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +44,23 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!isGrabbing)
+            {
+                OnCrateCollision();
+            }
+            else
+            {
+                ThrowCrate(grabbedCrate);
+            }
+        }
+
+        if (isGrabbing)
+        {
+            PickCrate(grabbedCrate);
+        }
+
         movement.x = Input.GetAxis("Horizontal");
         transform.position += movement * Time.deltaTime * maxSpeed.x;
 
@@ -105,5 +130,38 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+    }
+    public void OnCrateCollision()
+    {
+        int size = crateArray.Length;
+
+        for (int i = 0; i < size; i++)
+        {
+            if (playerCollider.IsTouching(crateArray[i]))
+            {
+                isGrabbing = true;
+                grabbedCrate = crateArray[i];
+            }
+        }
+    }
+
+    public void PickCrate(BoxCollider2D crate)
+    {
+        if(!flipped)
+        {
+            crate.transform.position = new Vector3(playerCollider.transform.position.x + playerCollider.size.x - 0.25f, (playerCollider.transform.position.y + 1), playerCollider.transform.position.z);
+        }
+        else
+        {
+            crate.transform.position = new Vector3(playerCollider.transform.position.x - playerCollider.size.x + 0.25f, (playerCollider.transform.position.y + 1), playerCollider.transform.position.z);
+        }
+        crate.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+    }
+
+    public void ThrowCrate(BoxCollider2D crate)
+    {
+        isGrabbing = false;
+
+        //crate.gameObject.transform = new Vector3(playerCollider.transform.position.x, (playerCollider.transform.position.y * 0.5f), playerCollider.transform.position.z);
     }
 }
