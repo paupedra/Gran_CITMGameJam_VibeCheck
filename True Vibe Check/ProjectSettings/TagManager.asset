@@ -6,6 +6,7 @@ TagManager:
   tags:
   - death
   - Box
+  - Light
   layers:
   - Default
   - TransparentFX

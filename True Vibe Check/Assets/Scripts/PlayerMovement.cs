@@ -169,9 +169,16 @@ public class PlayerMovement : MonoBehaviour
             versions++;
             //v_text.text = "Version: " + versions;
         }
+        else if (other.tag == "Light")
+        {
+            animator.SetBool("isDying", true);
+            Level_script.FadeToNextLevel();
+        }
 
-        
+           
+
     }
+
 
     
 
