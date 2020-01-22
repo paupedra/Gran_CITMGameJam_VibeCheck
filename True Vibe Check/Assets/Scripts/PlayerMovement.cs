@@ -152,6 +152,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -167,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+
 
     public void OnCrateCollision()
     {
