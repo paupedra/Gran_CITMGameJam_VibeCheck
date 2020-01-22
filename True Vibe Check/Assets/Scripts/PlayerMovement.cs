@@ -175,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
 
     
 
-public void OnCrateCollision()
+    public void OnCrateCollision()
     {
         int size = crateArray.Length;
 

@@ -20,6 +20,11 @@ public class Dummy : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             animator.SetBool("isDying", true);
         }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("DummyEmpty"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -29,4 +34,6 @@ public class Dummy : MonoBehaviour
             dead = true;
         }
     }
+
+   
 }
