@@ -14,9 +14,23 @@ public class GrabCrate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnCrateCollision();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!isGrabbing)
+            {
+                OnCrateCollision();
+            }
+            else
+            {
+                ThrowCrate(grabbedCrate);
+            }
+        }
 
-        PickCrate();
+        if (isGrabbing)
+        {
+            PickCrate(grabbedCrate);
+        }
+        
     }
 
     public void OnCrateCollision()
@@ -25,7 +39,7 @@ public class GrabCrate : MonoBehaviour
 
         for (int i = 0; i < size; i++)
         {
-            if (playerCollider.IsTouching(crateArray[i]) && Input.GetKeyDown(KeyCode.E))
+            if (playerCollider.IsTouching(crateArray[i]))
             {
                 isGrabbing = true;
                 grabbedCrate = crateArray[i];
@@ -33,11 +47,16 @@ public class GrabCrate : MonoBehaviour
         }
     }
 
-    public void PickCrate()
+    public void PickCrate(BoxCollider2D crate)
     {
-        if (isGrabbing)
-        {
-            grabbedCrate.transform.position = new Vector3(playerCollider.transform.position.x, (playerCollider.transform.position.y * 0.5f), playerCollider.transform.position.z);
-        }
+        crate.transform.position = new Vector3(playerCollider.transform.position.x + playerCollider.size.x - 0.25f, (playerCollider.transform.position.y + 1), playerCollider.transform.position.z);
+    }
+
+    public void ThrowCrate(BoxCollider2D crate)
+    {
+        isGrabbing = false;
+
+        //crate.gameObject.transform = new Vector3(playerCollider.transform.position.x, (playerCollider.transform.position.y * 0.5f), playerCollider.transform.position.z);
     }
 }
+

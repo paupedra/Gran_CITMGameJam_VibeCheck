@@ -24,7 +24,7 @@ public class Door : MonoBehaviour
 
         if (allButtonsActivated)
         {
-            if (doorElevation != elevationLimit)
+            if (doorElevation <= elevationLimit)
             {
                 //door.transform.position += new Vector3(0.0f, 0.05f, 0.0f);
                 door.gameObject.transform.position += new Vector3(0.0f, elevationSpeed, 0.0f);
