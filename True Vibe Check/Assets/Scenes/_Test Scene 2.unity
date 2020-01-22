@@ -337,6 +337,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c66897117a55e2f4e8704e71a193141f, type: 3}
+--- !u!70 &904872760 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6870792196116831331, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+    type: 3}
+  m_PrefabInstance: {fileID: 503168739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &958306288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,12 +462,12 @@ PrefabInstance:
     - target: {fileID: 3238572704432210244, guid: 20fb39800f63b534ca7656db5fd4e7a0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3238572704432210244, guid: 20fb39800f63b534ca7656db5fd4e7a0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3238572704432210244, guid: 20fb39800f63b534ca7656db5fd4e7a0,
         type: 3}
@@ -481,8 +487,38 @@ PrefabInstance:
     - target: {fileID: 3238572704432210244, guid: 20fb39800f63b534ca7656db5fd4e7a0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3238572704432210246, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.12316334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238572704432210246, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.8380697
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238572704432210246, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.017784595
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238572704432210246, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.5517366
+      objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 904872760}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateColliderArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1983501575}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20fb39800f63b534ca7656db5fd4e7a0, type: 3}
 --- !u!1 &1337323289
@@ -598,22 +634,22 @@ PrefabInstance:
     - target: {fileID: 4199344136269476313, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4199344136269476313, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4199344136269476313, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4199344136269476313, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4199344136269476313, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
@@ -633,7 +669,7 @@ PrefabInstance:
     - target: {fileID: 4199344136269476313, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4199344135565954848, guid: 9981fa64218b3444589a4286937dbce6,
         type: 3}
@@ -642,3 +678,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9981fa64218b3444589a4286937dbce6, type: 3}
+--- !u!61 &1983501575 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2808978013074567751, guid: e595d70b3ac7da24c8214026b6987825,
+    type: 3}
+  m_PrefabInstance: {fileID: 33151345}
+  m_PrefabAsset: {fileID: 0}

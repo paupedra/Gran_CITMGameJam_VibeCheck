@@ -706,6 +706,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1880199994088812754, guid: f9d783cb488c2ef44ac3b8f7e909c6c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: -9146823523210083818, guid: f9d783cb488c2ef44ac3b8f7e909c6c2,
         type: 3}
       propertyPath: buttonsArray.Array.size
@@ -725,11 +730,6 @@ PrefabInstance:
         type: 3}
       propertyPath: elevationSpeed
       value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1880199994088812754, guid: f9d783cb488c2ef44ac3b8f7e909c6c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 1880199994088812759, guid: f9d783cb488c2ef44ac3b8f7e909c6c2,
         type: 3}
@@ -1022,65 +1022,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateArray.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateColliderArray.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: buttonCollider
-      value: 
-      objectReference: {fileID: 9189071446661030552}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: playerCollider
-      value: 
-      objectReference: {fileID: 211006559}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateCollider
-      value: 
-      objectReference: {fileID: 36498011}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateArray.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateColliderArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 36498011}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateColliderArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 1936292083}
-    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
-        type: 3}
-      propertyPath: crateColliderArray.Array.data[2]
-      value: 
-      objectReference: {fileID: 288203488}
     - target: {fileID: 3238572704432210241, guid: 20fb39800f63b534ca7656db5fd4e7a0,
         type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238572704432210241, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3238572704432210244, guid: 20fb39800f63b534ca7656db5fd4e7a0,
         type: 3}
@@ -1162,6 +1112,61 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.84814477
       objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateArray.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateColliderArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: buttonCollider
+      value: 
+      objectReference: {fileID: 9189071446661030552}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 211006559}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateCollider
+      value: 
+      objectReference: {fileID: 36498011}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateColliderArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 36498011}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateColliderArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1936292083}
+    - target: {fileID: -4190145599493194841, guid: 20fb39800f63b534ca7656db5fd4e7a0,
+        type: 3}
+      propertyPath: crateColliderArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 288203488}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20fb39800f63b534ca7656db5fd4e7a0, type: 3}
 --- !u!114 &9189071446661030551 stripped

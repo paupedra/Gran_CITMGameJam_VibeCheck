@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c4c1f4fe236c6b4fa0d0b27b279952e, type: 3}
+  m_Sprite: {fileID: 8467241744927558709, guid: 388dbddd6389e2d4a9e2cc5774d83856,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.15}
+    oldSize: {x: 0.65, y: 0.65}
     newSize: {x: 8.1, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125,8 +126,10 @@ MonoBehaviour:
   activated: 0
   buttonCollider: {fileID: 3238572704432210246}
   playerCollider: {fileID: 0}
-  crateArray: []
-  crateColliderArray: []
+  crateArray:
+  - {fileID: 0}
+  crateColliderArray:
+  - {fileID: 0}
 --- !u!95 &1540446197466715406
 Animator:
   serializedVersion: 3

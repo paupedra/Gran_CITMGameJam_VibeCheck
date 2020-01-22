@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", true);
             running = true;
             transform.localRotation = Quaternion.Euler(0, 180, 0);
-            Debug.Log("Running");
+            //Debug.Log("Running");
         }
 
         if (Input.GetAxis("Horizontal") < 0)
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", true);
             running = true;
             transform.localRotation = Quaternion.Euler(0, 0, 0);
-            Debug.Log("Running");
+            //Debug.Log("Running");
         }
 
         feetOffset.y = -2 * transform.localScale.y;
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isJumping", true);
                 animator.SetBool("isFalling", false);
-                Debug.Log("Jumping!");
+               // Debug.Log("Jumping!");
                 jumping = true;
                 falling = false;
             }
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isFalling", true);
                 animator.SetBool("isJumping", false);
-                Debug.Log("Falling!");
+               // Debug.Log("Falling!");
                 falling = true;
                 jumping = false;
             }
