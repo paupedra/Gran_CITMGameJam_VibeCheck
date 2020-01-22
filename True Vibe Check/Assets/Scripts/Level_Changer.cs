@@ -21,6 +21,11 @@ public class Level_Changer : MonoBehaviour
             FadeToOwnLevel();
         }
 
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            quitthisshsit();
+        }
+
         GoToLevel();
     }
 
@@ -69,6 +74,10 @@ public class Level_Changer : MonoBehaviour
         }
     }
 
+    public void quitthisshsit()
+    {
+        Application.Quit();
+    }
 
     public void FadeToLevel(int levelIndex)
     {   
