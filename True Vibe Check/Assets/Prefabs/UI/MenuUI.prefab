@@ -207,7 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cfbfb4248f163498ae4e9a958d0be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 8974658500340955500}
+  PauseMenuUI: {fileID: 9215612528227320797}
+  ResumeBut: {fileID: 8974658500860686950}
 --- !u!1 &8974658499594839623
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +728,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8974658499954460792}
+      - m_Target: {fileID: 9215612528227320797}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1711,7 +1712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8974658499954460792}
+      - m_Target: {fileID: 9215612528227320797}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
