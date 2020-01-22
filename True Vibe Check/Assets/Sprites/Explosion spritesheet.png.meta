@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: d5f212ddbb4eb1c40bed0efef5d4cdfa
+guid: d95d7dc2e2bf2214daba9842de70cbc9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4768491185540978301
-    second: Lighting_0
+      213: -1866391204300004274
+    second: Explosion spritesheet_0
   - first:
-      213: -5829346498430573815
-    second: Lighting_1
+      213: -5240019209275888059
+    second: Explosion spritesheet_1
   - first:
-      213: 8035443207316782
-    second: Lighting_2
+      213: 3502320917379342018
+    second: Explosion spritesheet_2
   - first:
-      213: 2423334966335226251
-    second: Lighting_3
+      213: -7935768247785576866
+    second: Explosion spritesheet_3
+  - first:
+      213: 8505110673862356446
+    second: Explosion spritesheet_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lighting_0
+      name: Explosion spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 330
-        height: 1138
+        width: 350
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf95c9a7e6586c347801e75f113b40ed
-      internalID: -4768491185540978301
+      spriteID: e10919e3a5099934faa899a85aba9bdc
+      internalID: -1866391204300004274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lighting_1
+      name: Explosion spritesheet_1
       rect:
         serializedVersion: 2
-        x: 330
+        x: 350
         y: 0
-        width: 330
-        height: 1138
+        width: 350
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc15a4cf2f760fd48932e811d0d5159f
-      internalID: -5829346498430573815
+      spriteID: 60cd50b56508d4244a12038dccf1d3c8
+      internalID: -5240019209275888059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lighting_2
+      name: Explosion spritesheet_2
       rect:
         serializedVersion: 2
-        x: 660
+        x: 700
         y: 0
-        width: 330
-        height: 1138
+        width: 350
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a111ad58d1e3b24dabba076788c594f
-      internalID: 8035443207316782
+      spriteID: 106f108d813431c44828fcb94e3e43f0
+      internalID: 3502320917379342018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lighting_3
+      name: Explosion spritesheet_3
       rect:
         serializedVersion: 2
-        x: 990
+        x: 1050
         y: 0
-        width: 330
-        height: 1138
+        width: 350
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +178,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adcb82e2dbbf0fd4b8e8da98c6d20f4e
-      internalID: 2423334966335226251
+      spriteID: 45ded206fc806c94ab1f4830cbf82f48
+      internalID: -7935768247785576866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 350
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0137612ad3811a94fb2742a3711466a3
+      internalID: 8505110673862356446
       vertices: []
       indices: 
       edges: []
