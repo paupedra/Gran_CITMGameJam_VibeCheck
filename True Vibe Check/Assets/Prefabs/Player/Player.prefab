@@ -151,8 +151,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   checkRadious: 0.1
+  versions: 0
+  v_text: {fileID: 0}
   crateArray: []
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 6870792196116831331}
+  LevelChange: {fileID: 0}
 --- !u!95 &1109576664
 Animator:
   serializedVersion: 3
@@ -187,3 +190,4 @@ MonoBehaviour:
   worldFloorLimit: {fileID: 0}
   playerCollider: {fileID: 0}
   loader: {fileID: 0}
+  player: {fileID: 0}

@@ -21,7 +21,7 @@ public class Level_Changer : MonoBehaviour
             FadeToOwnLevel();
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Backspace))
         {
             quitthisshsit();
         }
@@ -31,7 +31,7 @@ public class Level_Changer : MonoBehaviour
 
     public void FadeToNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 3)
+        if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings)
         {
             FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
         }
