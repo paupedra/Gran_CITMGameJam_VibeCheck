@@ -23,7 +23,7 @@ public class Dummy : MonoBehaviour
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("DummyEmpty"))
         {
-            Destroy(this,0f);
+            Destroy(gameObject);
         }
     }
     

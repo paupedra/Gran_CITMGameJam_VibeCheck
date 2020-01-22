@@ -88,8 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
         running = false;
 
-        if (dead)
-        {
+        
             if (Input.GetAxis("Horizontal") > 0)
             {
                 animator.SetBool("isRunning", true);
@@ -106,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
                 flipped = true;
                 //Debug.Log("Running");
             }
-        }
+        
         feetOffset.y = -2 * transform.localScale.y;
         isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
 
