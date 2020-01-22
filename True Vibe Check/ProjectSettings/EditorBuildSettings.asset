@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/4th Scene.unity
     guid: 9de6fc417f16f0440a17743253de3236
   - enabled: 1
+    path: Assets/Scenes/5th Scene.unity
+    guid: ec36dfa71fc2eae4a88a9306ff725977
+  - enabled: 1
     path: Assets/Scenes/_Test Scene 1.unity
     guid: ba3268e97d3334442b4b6c06e5d5a3ab
   - enabled: 1
