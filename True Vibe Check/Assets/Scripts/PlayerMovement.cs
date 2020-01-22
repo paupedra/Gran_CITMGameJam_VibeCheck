@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     public float checkRadious;
 
+   
     public int versions = 0;
 
     public Text v_text;
@@ -49,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("I have been born");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
         v_text.text = "Version: " + versions;
 
         Level_script = LevelChange.GetComponent<Level_Changer>();
