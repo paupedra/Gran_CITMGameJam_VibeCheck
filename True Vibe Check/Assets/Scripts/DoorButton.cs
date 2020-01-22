@@ -7,7 +7,6 @@ public class DoorButton : MonoBehaviour
 {
     public bool activated;
     public BoxCollider2D buttonCollider;
-    public BoxCollider2D crateCollider;
     public CapsuleCollider2D playerCollider;
 
     public GameObject[] crateArray;
