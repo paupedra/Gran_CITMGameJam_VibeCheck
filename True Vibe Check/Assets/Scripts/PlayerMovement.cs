@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
     //public int versionss = random.Next(2000);
 
- 
-
     Animator animator;
 
     //Crate Grab
@@ -42,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Acces to other scripts
     public GameObject LevelChange;
     private Level_Changer Level_script;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,13 +107,13 @@ public class PlayerMovement : MonoBehaviour
             running = false;
         }
 
+
         if (dead)
         {
             animator.SetBool("isDying", true);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            animator.SetBool("isEmpty", true);
             Level_script.FadeToOwnLevel();
         }
-
 
         if (isGrounded)
         {
@@ -160,13 +159,15 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("death");
             dead = true;
             version++;
+            animator.SetBool("isDying", true);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+
         }
-
-
     }
 
+    
 
-    public void OnCrateCollision()
+public void OnCrateCollision()
     {
         int size = crateArray.Length;
 
