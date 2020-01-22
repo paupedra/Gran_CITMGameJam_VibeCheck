@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     static Rigidbody2D rb;
     public Vector2 jumpForce;
     public Vector3 feetOffset;
+    public Vector3 handsOffset;
 
     public bool running;
     public bool falling;
@@ -38,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
         transform.position += movement * Time.deltaTime * maxSpeed.x;
 
         animator.SetBool("isRunning", false);
+        animator.SetBool("isFalling", false);
+        animator.SetBool("isJumping", false);
+
         running = false;
 
         if (Input.GetAxis("Horizontal") > 0)
@@ -57,8 +61,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         feetOffset.y = -2 * transform.localScale.y;
-
         isGrounded = Physics2D.OverlapCircle(transform.position + feetOffset, checkRadious, whatIsGround);
+
+        if(running && !isGrounded)
+        {
+            animator.SetBool("isRunning", false);
+            running = false;
+        }
 
         if(isGrounded)
         {
@@ -71,11 +80,15 @@ public class PlayerMovement : MonoBehaviour
 
             if(rb.velocity.y > 0)
             {
+                animator.SetBool("isJumping", true);
+                Debug.Log("Jumping!");
                 jumping = true;
                 falling = false;
             }
             else
             {
+                animator.SetBool("isFalling", true);
+                Debug.Log("Falling!");
                 falling = true;
                 jumping = false;
             }
@@ -84,11 +97,6 @@ public class PlayerMovement : MonoBehaviour
         if(isGrounded && Input.GetButtonDown("Jump") )
         {
             rb.velocity = Vector2.up * jumpForce;
-        }
-
-        if(isGrounded )
-        {
-
         }
     }
 }
