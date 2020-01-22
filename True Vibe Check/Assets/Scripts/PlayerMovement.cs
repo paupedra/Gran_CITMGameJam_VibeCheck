@@ -73,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         {
             falling = false;
             jumping = false;
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
         }
         else
         {
