@@ -130,7 +130,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+
+
     }
+
     public void OnCrateCollision()
     {
         int size = crateArray.Length;
