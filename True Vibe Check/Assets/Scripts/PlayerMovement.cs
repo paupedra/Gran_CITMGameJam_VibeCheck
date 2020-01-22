@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public bool dead = false;
     public int version = 0;
 
+    public float timer = 0f;
+    public bool startTimer = false;
 
     bool isGrounded;
     public LayerMask whatIsGround;
@@ -159,6 +161,17 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
+        if (startTimer)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= 15.0f)
+            {
+                playFx = true;
+                animator.SetBool("isDying", true);
+                Level_script.FadeToLevel(0);
+            }
+        }
 
     }
 
@@ -177,9 +190,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isDying", true);
             Level_script.FadeToNextLevel();
         }
+        else if (other.tag == "Autodestroy")
+        {
+            startTimer = true;
+        }
 
-           
-
+        
     }
 
 
@@ -218,4 +234,6 @@ public class PlayerMovement : MonoBehaviour
 
         //crate.gameObject.transform = new Vector3(playerCollider.transform.position.x, (playerCollider.transform.position.y * 0.5f), playerCollider.transform.position.z);
     }
+
+   
 }
