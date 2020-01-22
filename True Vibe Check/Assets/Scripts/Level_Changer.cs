@@ -16,9 +16,9 @@ public class Level_Changer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(Input.GetKeyDown(KeyCode.R))
         {
-            FadeToNextLevel();
+            FadeToOwnLevel();
         }
 
         GoToLevel();
@@ -33,6 +33,13 @@ public class Level_Changer : MonoBehaviour
         else
         {
             FadeToLevel(0);
+        }
+    }
+    public void FadeToOwnLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 3)
+        {
+            FadeToLevel(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
