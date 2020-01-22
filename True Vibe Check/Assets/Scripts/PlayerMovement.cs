@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             if(rb.velocity.y > 0)
             {
                 animator.SetBool("isJumping", true);
+                animator.SetBool("isFalling", false);
                 Debug.Log("Jumping!");
                 jumping = true;
                 falling = false;
@@ -90,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 animator.SetBool("isFalling", true);
+                animator.SetBool("isJumping", false);
                 Debug.Log("Falling!");
                 falling = true;
                 jumping = false;
