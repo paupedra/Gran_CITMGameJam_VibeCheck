@@ -517,8 +517,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7401240864739677888, guid: 496ee6befba24f3489e555be20a49348,
         type: 3}
+      propertyPath: crateArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401240864739677888, guid: 496ee6befba24f3489e555be20a49348,
+        type: 3}
       propertyPath: velocity.x
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7401240864739677888, guid: 496ee6befba24f3489e555be20a49348,
         type: 3}
@@ -530,6 +535,11 @@ PrefabInstance:
       propertyPath: playerCollider
       value: 
       objectReference: {fileID: 1576724307}
+    - target: {fileID: 7401240864739677888, guid: 496ee6befba24f3489e555be20a49348,
+        type: 3}
+      propertyPath: crateArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1631672843}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 496ee6befba24f3489e555be20a49348, type: 3}
 --- !u!1001 &656723913
@@ -850,6 +860,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9981fa64218b3444589a4286937dbce6, type: 3}
+--- !u!61 &1631672843 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2808978013074567751, guid: e595d70b3ac7da24c8214026b6987825,
+    type: 3}
+  m_PrefabInstance: {fileID: 1262607101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1780059492
 GameObject:
   m_ObjectHideFlags: 0
