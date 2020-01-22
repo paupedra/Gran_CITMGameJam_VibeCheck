@@ -7,16 +7,17 @@ public class DoorButton : MonoBehaviour
 {
     public bool activated;
     public BoxCollider2D buttonCollider;
-    public BoxCollider2D crateCollider;
     public CapsuleCollider2D playerCollider;
 
     public GameObject[] crateArray;
     public BoxCollider2D[] crateColliderArray;
 
+    Animator animator;
+
     //public DoorButton button_1;
     //public DoorButton button_2;
     //public DoorButton button_3;
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -28,12 +29,14 @@ public class DoorButton : MonoBehaviour
         if (buttonCollider.IsTouching(playerCollider) || /*buttonCollider.IsTouching(crateCollider)*/ OnCrateContact())
         {
             activated = true;
-
+            //animator.SetBool("isPressed", true);
+            Debug.Log("Button Pressed!!");
             //buttonCollider.gameObject.transform.position = new Vector3(0.0f, 100.0f, 0.0f);
         }
         else
         {
             activated = false;
+           // animator.SetBool("isPressed", false);
         }
     }
 

@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: e89d86acce6afcf4baea664e24c2e774
+guid: 388dbddd6389e2d4a9e2cc5774d83856
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6732294965104032732
-    second: fall_0
+      213: 649223268058989734
+    second: Button_0
   - first:
-      213: -8269792095265539674
-    second: fall_1
+      213: -9000188618666376746
+    second: Button_1
+  - first:
+      213: 8467241744927558709
+    second: Button_2
+  - first:
+      213: 1566552715412073297
+    second: Button_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -92,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fall_0
+      name: Button_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 200
-        height: 300
+        y: 130
+        width: 65
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0728c72b2f7b1e458aacf536b2af4f2
-      internalID: -6732294965104032732
+      spriteID: b0c40f543969d614898754328b4073db
+      internalID: 649223268058989734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fall_1
+      name: Button_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 200
-        height: 300
+        x: 65
+        y: 130
+        width: 65
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +133,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0329a0d47c53b374ab77702a4b8ac665
-      internalID: -8269792095265539674
+      spriteID: 74aa8841eca566249b220523f16392ba
+      internalID: -9000188618666376746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd41d82ca7ea4204ea94e15dffff4ae1
+      internalID: 8467241744927558709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7961f9161787d44b5fd6df9c3ca0ee
+      internalID: 1566552715412073297
       vertices: []
       indices: 
       edges: []
