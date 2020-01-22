@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public bool running;
     public bool falling;
     public bool jumping;
-    public bool dead = false;
-    public int version = 0;
 
     bool isGrounded;
     public LayerMask whatIsGround;
@@ -25,18 +23,13 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
-
-    public GameObject LevelChange;
-    private Level_Changer Level_script;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("I have been born");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-
-        Level_script = LevelChange.GetComponent<Level_Changer>();
+        
     }
 
     // Update is called once per frame
@@ -75,12 +68,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", false);
             running = false;
         }
-        if(dead)
-        {
-            animator.SetBool("isDying", true);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-            Level_script.FadeToOwnLevel();
-        }
 
         if(isGrounded)
         {
@@ -116,17 +103,4 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "death")
-        {
-            Debug.Log("death");
-            dead = true;
-            version++;
-        }
-        
-
-    }
- 
 }
