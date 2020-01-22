@@ -18,10 +18,15 @@ public class Dummy : MonoBehaviour
         if (dead)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
-            animator.SetBool("isDying", true);
+            animator.SetBool("isDead", true);
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("DummyEmpty"))
+        {
+            Destroy(gameObject);
         }
     }
-
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "Box")
