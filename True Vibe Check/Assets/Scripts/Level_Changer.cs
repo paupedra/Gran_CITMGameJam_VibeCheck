@@ -37,10 +37,12 @@ public class Level_Changer : MonoBehaviour
     }
     public void FadeToOwnLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 3)
-        {
-            FadeToLevel(SceneManager.GetActiveScene().buildIndex);
-        }
+        FadeToLevel(SceneManager.GetActiveScene().buildIndex);
+
+        //if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 3)
+        //{
+        //    FadeToLevel(SceneManager.GetActiveScene().buildIndex);
+        //}
     }
 
     public void GoToLevel()
@@ -77,5 +79,10 @@ public class Level_Changer : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToLoadIndex);
+    }
+
+    public int ReturnCurrentSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 }
