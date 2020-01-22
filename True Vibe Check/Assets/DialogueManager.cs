@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         foreach(char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return 4;
+            yield return 2000;
         }
     }
     void EndDialogue()
