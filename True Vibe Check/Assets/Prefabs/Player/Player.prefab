@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4731451302762387981}
   - component: {fileID: 1109576664}
   - component: {fileID: 2969830727772900731}
+  - component: {fileID: 9112016696488604869}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -144,6 +145,7 @@ MonoBehaviour:
   running: 0
   falling: 0
   jumping: 0
+  flipped: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -177,5 +179,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8546d739d88298646bb58f0c276b0ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crateArray: []
+  playerCollider: {fileID: 0}
+--- !u!114 &9112016696488604869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870792196116831330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561b78d2a048c1469aa9bb6e3ab2d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
 
     public float elevationSpeed = 0.05f;
     public float elevationLimit = 10.0f;
+    public bool horizontal = false;
     private bool allButtonsActivated;
     private float doorElevation = 0.0f;
 
@@ -27,8 +28,16 @@ public class Door : MonoBehaviour
             if (doorElevation <= elevationLimit)
             {
                 //door.transform.position += new Vector3(0.0f, 0.05f, 0.0f);
-                door.gameObject.transform.position += new Vector3(0.0f, elevationSpeed, 0.0f);
-                doorElevation += elevationSpeed;
+                if (!horizontal)
+                {
+                    door.gameObject.transform.position += new Vector3(0.0f, elevationSpeed, 0.0f);
+                    doorElevation += elevationSpeed;
+                }
+                else
+                {
+                    door.gameObject.transform.position += new Vector3(elevationSpeed, 0.0f, 0.0f);
+                    doorElevation += elevationSpeed;
+                }
             }
             else
             {

@@ -17,10 +17,17 @@ public class PlayerMovement : MonoBehaviour
     public bool falling;
     public bool jumping;
     public bool flipped;
+    public bool dead = false;
+    public int version = 0;
+
 
     bool isGrounded;
     public LayerMask whatIsGround;
     public float checkRadious;
+
+    //public int versionss = random.Next(2000);
+
+ 
 
     Animator animator;
 
@@ -32,13 +39,17 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrabbing = false;
 
+    // Acces to other scripts
+    public GameObject LevelChange;
+    private Level_Changer Level_script;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("I have been born");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
+
+        Level_script = LevelChange.GetComponent<Level_Changer>();
     }
 
     // Update is called once per frame
@@ -97,7 +108,15 @@ public class PlayerMovement : MonoBehaviour
             running = false;
         }
 
-        if(isGrounded)
+        if (dead)
+        {
+            animator.SetBool("isDying", true);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            Level_script.FadeToOwnLevel();
+        }
+
+
+        if (isGrounded)
         {
             falling = false;
             jumping = false;
@@ -133,6 +152,19 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "death")
+        {
+            Debug.Log("death");
+            dead = true;
+            version++;
+        }
+
+
+    }
+
 
     public void OnCrateCollision()
     {
