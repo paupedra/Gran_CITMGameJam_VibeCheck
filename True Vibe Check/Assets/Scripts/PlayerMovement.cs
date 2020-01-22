@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     public float checkRadious;
 
+    public int versionss = random.Next(2000);
+
+    public Text versionsText;
+
     Animator animator;
 
     //Crate Grab
