@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     // Acces to other scripts
     public GameObject LevelChange;
     private Level_Changer Level_script;
+    public bool playFx;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         //v_text.text = "Version: " + versions;
 
         Level_script = LevelChange.GetComponent<Level_Changer>();
+        playFx = false;
     }
 
     // Update is called once per frame
@@ -169,9 +171,17 @@ public class PlayerMovement : MonoBehaviour
             versions++;
             //v_text.text = "Version: " + versions;
         }
+        else if (other.tag == "Light")
+        {
+            playFx = true;
+            animator.SetBool("isDying", true);
+            Level_script.FadeToNextLevel();
+        }
 
-        
+           
+
     }
+
 
     
 

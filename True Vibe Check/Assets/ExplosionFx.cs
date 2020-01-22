@@ -25,5 +25,10 @@ public class ExplosionFx : MonoBehaviour
             explosion.Play();
             played = true;
         }
+     else if(player.playFx && !played)
+        {
+            explosion.Play();
+            played = true;
+        }
     }
 }
