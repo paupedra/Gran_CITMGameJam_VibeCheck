@@ -143,6 +143,7 @@ MonoBehaviour:
   jumpSpeed: {x: 0, y: 0}
   jumpForce: {x: 0, y: 15}
   feetOffset: {x: 0, y: 0, z: 0}
+  handsOffset: {x: 0, y: 0, z: 0}
   running: 0
   falling: 0
   jumping: 0
