@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public float elevationSpeed = 0.05f;
     public float elevationLimit = 10.0f;
     public bool horizontal = false;
+    public bool directionRightUp = true;
     private bool allButtonsActivated;
     private float doorElevation = 0.0f;
 
@@ -27,15 +28,30 @@ public class Door : MonoBehaviour
         {
             if (doorElevation <= elevationLimit)
             {
-                //door.transform.position += new Vector3(0.0f, 0.05f, 0.0f);
                 if (!horizontal)
                 {
-                    door.gameObject.transform.position += new Vector3(0.0f, elevationSpeed, 0.0f);
+                    if (directionRightUp)
+                    {
+                        door.gameObject.transform.position += new Vector3(0.0f, elevationSpeed, 0.0f);
+                    }
+                    else
+                    {
+                        door.gameObject.transform.position -= new Vector3(0.0f, elevationSpeed, 0.0f);
+                    }
+
                     doorElevation += elevationSpeed;
                 }
                 else
                 {
-                    door.gameObject.transform.position += new Vector3(elevationSpeed, 0.0f, 0.0f);
+                    if (directionRightUp)
+                    {
+                        door.gameObject.transform.position += new Vector3(elevationSpeed, 0.0f, 0.0f);
+                    }
+                    else
+                    {
+                        door.gameObject.transform.position -= new Vector3(elevationSpeed, 0.0f, 0.0f);
+                    }
+                       
                     doorElevation += elevationSpeed;
                 }
             }
