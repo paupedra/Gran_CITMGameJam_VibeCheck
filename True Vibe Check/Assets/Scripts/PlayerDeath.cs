@@ -7,6 +7,7 @@ public class PlayerDeath : MonoBehaviour
     public BoxCollider2D worldFloorLimit;
     public CapsuleCollider2D playerCollider;
     public Level_Changer loader;
+    public GameObject player;
 
     // Update is called once per frame
     void Update()

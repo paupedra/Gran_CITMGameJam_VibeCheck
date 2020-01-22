@@ -261,8 +261,29 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: crateArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 904872760}
+    - target: {fileID: -4731451302762387981, guid: 5e2b5d2edb9b96a4c9e10265afc88562,
+        type: 3}
+      propertyPath: LevelChange
+      value: 
+      objectReference: {fileID: 533279464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2b5d2edb9b96a4c9e10265afc88562, type: 3}
+--- !u!1 &533279464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4199344136269476315, guid: 9981fa64218b3444589a4286937dbce6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1938092206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &582952652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,7 +375,7 @@ GameObject:
   m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &819727642
 BoxCollider2D:
@@ -366,7 +387,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.15028691, y: -0.00000047683716}
@@ -440,7 +461,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4768491185540978301, guid: d5f212ddbb4eb1c40bed0efef5d4cdfa,
+  m_Sprite: {fileID: -4768491185540978301, guid: 3e8415ff987aafc4b9757072c7f0c181,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
