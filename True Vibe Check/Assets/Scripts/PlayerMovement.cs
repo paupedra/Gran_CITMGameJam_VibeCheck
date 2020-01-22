@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public bool running;
     public bool falling;
     public bool jumping;
+    public bool flipped;
 
     bool isGrounded;
     public LayerMask whatIsGround;
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", true);
             running = true;
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+            flipped = false;
             //Debug.Log("Running");
         }
 
@@ -57,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", true);
             running = true;
             transform.localRotation = Quaternion.Euler(0, 0, 0);
+            flipped = true;
             //Debug.Log("Running");
         }
 
