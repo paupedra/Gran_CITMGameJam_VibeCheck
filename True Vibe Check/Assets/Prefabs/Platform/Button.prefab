@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3238572704432210247}
   - component: {fileID: 3238572704432210246}
   - component: {fileID: -4190145599493194841}
+  - component: {fileID: 1540446197466715406}
   m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
@@ -121,3 +122,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc8c924069b427429af1ca5805d6918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activated: 0
+  buttonCollider: {fileID: 3238572704432210246}
+  playerCollider: {fileID: 0}
+  crateArray: []
+  crateColliderArray: []
+--- !u!95 &1540446197466715406
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238572704432210241}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8211d062884e7e419a5416fb442157b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
